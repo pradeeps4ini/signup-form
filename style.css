@@ -15,28 +15,32 @@
   --font-size: 10px;
   --font-weight-bold: bold;
   --font-family: "Norse-Bold", serif;
-  --text: #464242; 
+  --text-color: #464242;
+  --highlight-color: #8eb5c9; 
 }
 
 body {
   width: 100vw;
-  height: 100vh;
-  color: var(--text);
+  min-height: 100vh;
+  color: var(--text-color);
 }
 
 main {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 #section-one {
   flex-basis: 40%;
   position: relative;
+  display: flex;
+  flex-flow: column nowrap;
   background: url("./image/timer.jpg");
   background-size: cover;
+  background-attachment: scroll;
 }
 
-#section-one div {
+#section-one div:first-child {
   position: relative;
   top: 140px;
   width: 100%;
@@ -52,18 +56,25 @@ main {
   align-self: center;
   font-size: calc(var(--font-size) * 4);
   font-family: var(--font-family);
-  color: white;
+  color: #ffffff;
 }
 
+#section-one div:last-child {
+  position: relative;
+  top: 80%;
+  left: 25%;
+  color: var(--text-color);
+}
 
 #section-two {
   flex-basis: 60%;
 }
 
 #section-two > div:first-child {
-  min-height: 35%;
-  padding: 100px 50px 30px 50px;
+  min-height: 25%;
+  padding: 30px 50px 20px 50px;
   background: #f9fafb;
+  box-shadow: 0 2px 3px #eceff2;
 } 
 
 #section-two > div:first-child > * {
@@ -76,11 +87,37 @@ main {
 }
 
 
-.form-container {
- padding: 0 50px 20px 50px;
+/* ----FORM---- */
+
+label {
+  font-size: calc(var(--font-size) * 1.2);
+  font-weight: 550;
 }
 
-.form-container p {
+input {
+  width: max(70%, 150px);
+  height: 25px;
+  border: 1px solid #E5E7EB;
+  border-radius: 5px;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid var(--highlight-color);
+}
+
+a {
+  color: var(--highlight-color);
+  text-decoration: none;
+}
+
+.form div {
+ padding: 20px 50px 40px 50px;
+ box-shadow: 0 5px 5px #dcddde;
+}
+
+.form p {
+  margin-bottom: 30px;
   font-size: calc(var(--font-size) * 2);
   font-weight: var(--font-weight-bold);
 }
@@ -96,16 +133,21 @@ main {
   flex-basis: 40%;
   display: flex;
   flex-flow: column nowrap;
+  gap: .3rem;
 }
 
-label {
-  font-size: calc(var(--font-size) * 1.2);
-  font-weight: 550;
+.form button {
+  margin: 30px 0 30px 50px;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  background: var(--highlight-color);  
+  font-size: calc(var(--font-size) * 2);
+  font-weight: bold;
 }
 
-input {
-  width: max(70%, 150px);
-  border: 1px solid #E5E7EB;
+#section-two div:last-child {
+  padding-left: 50px;
+  font-weight: bold;
 }
-
-

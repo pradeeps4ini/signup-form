@@ -14,6 +14,9 @@
         <img src="./image/logo.png" alt="quiz logo">
         <h1>Quiz Battle</h1>
       </div>
+      <div>
+        <p>Photo by Kalie on Unsplash</p>
+      </div>
     </section>
 
     <section id="section-two">
@@ -23,11 +26,9 @@
       </div>
       
       <div class="form-container">
-        <p>
-          <p>Let's do this!</p>
-        </p>
         <form class="form"action="" method="">
           <div>
+            <p>Let's do this!</p>
             <ul>
               <li>
                 <label for="firstName">FIRST NAME <span>*</span></label>
@@ -47,11 +48,11 @@
               </li>
               <li>
                 <label for="password">PASSWORD <span>*</span></label>
-                <input type="password" id="password" name="password" required>
+                <input class="error password" type="password" id="password" name="password" required>
               </li>
               <li>
-                <label for="confirmPassword">CONFIRM PASSWORD*</label>
-                <input type="password" id="confirmPassword" name="confirmPassword">
+                <label for="confirmPassword">CONFIRM PASSWORD <span>*</span></label>
+                <input class="error confirmPassword" type="password" id="confirmPassword" name="confirmPassword">
               </li>
             </ul>
           </div>
@@ -60,7 +61,7 @@
         </form>
       </div>
       <div>
-        <p>Already have an account? Login</p>
+        <p>Already have an account? <a href="#">Login</a></p>
       </div>
     </section>
   </main>
